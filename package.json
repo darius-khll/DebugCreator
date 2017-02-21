@@ -10,8 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/Alikhll/DebugCreator.git"
   },
+  "bin": {
+    "debug": "index.js"
+  },
+  "preferGlobal": true,
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^6.0.55"
+  },
   "bugs": {
     "url": "https://github.com/Alikhll/DebugCreator/issues"
   },
