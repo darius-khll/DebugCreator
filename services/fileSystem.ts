@@ -2,31 +2,38 @@
 import * as fs from "fs";
 
 export class fileSystem {
-    public static async readFile(fileName: string): Promise<any> {
-        fs.readFile(fileName, (err, data) => {
-            if (err) {
-                return console.error(err);
-            }
-            return data.toString();
+    public static async readFile(fileName: string, encoding: string = "utf8"): Promise<any> {
+        return new Promise<any>((res, rej) => {
+            fs.readFile(fileName, encoding, (err, data) => {
+                if (err) {
+                    return console.error(err);
+                }
+                return res(data);
+            })
         });
     }
 
     public static async open(fileName: string, flag: 'r' | 'r+' | 'rs' | 'rs+' | 'w' | 'w+' | 'wx' | 'wx+' | 'a' | 'ax' | 'a+' | 'ax+'): Promise<void> {
-        fs.open(fileName, flag, (err, fd) => {
-            if (err) {
-                return console.error(err);
-            }
-            console.log("File opened successfully!");
+        return new Promise<void>((res, rej) => {
+            fs.open(fileName, flag, (err, fd) => {
+                if (err) {
+                    return console.error(err);
+                }
+                console.log("File opened successfully!");
+                res();
+            })
         });
     }
 
     public static async close(fd: any): Promise<void> {
-        fs.close(fd, (err) => {
-            if (err) {
-                console.log(err);
-            }
-            console.log("File closed successfully.");
-        })
+        return new Promise<void>((res, rej) => {
+            fs.close(fd, (err) => {
+                if (err) {
+                    console.log(err);
+                }
+                console.log("File closed successfully.");
+            })
+        });
     }
 
     public static stat(fileName: string): Promise<fs.Stats> {
