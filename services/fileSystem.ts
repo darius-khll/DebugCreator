@@ -48,10 +48,12 @@ export class fileSystem {
     }
 
     public static async writeFile(fileName: string, text: string): Promise<void> {
-        fs.writeFile(fileName, text, (err) => {
-            if (err) {
-                return console.error(err);
-            }
+        return new Promise<void>((res, rej) => {
+            fs.writeFile(fileName, text, (err) => {
+                if (err) {
+                    return console.error(err);
+                }
+            })
         });
     }
 
