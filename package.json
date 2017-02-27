@@ -1,6 +1,6 @@
 {
-  "name": "debug",
-  "version": "1.0.0",
+  "name": "debug-c",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Alikhll/DebugCreator.git"
   },
   "bin": {
-    "debug": "index.js"
+    "debug-c": "index.js"
   },
   "preferGlobal": true,
   "author": "",
