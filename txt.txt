@@ -1,23 +1,42 @@
 function f1()
 {
-    wow
-    test1(){
-        if(z == 1)
-            aaaa;
-    }
+debugger;
+debugger;
+debugger;
+debugger;
+	wow
+	test1(){
+debugger;
+debugger;
+debugger;
+debugger;
+		let items = [1,2,3];
+		for(let i of items)
+debugger;
+debugger;
+debugger;
+debugger;
+		}
+debugger;
+debugger;
+			console.log(i);
+debugger;
+debugger;
+debugger;
+		}
+debugger;
+	}
+debugger;
+debugger;
+debugger;
 }
+debugger;
+debugger;
 
-function f1()
-{
-    wow
-    test1(){
-        if(z == 1)
-            aaaa;
-    }
-    www
-    aaa
-    asdsad
-    asdasd
-}
+debugger;
+debugger;
+debugger;
+debugger;
+
 
 
